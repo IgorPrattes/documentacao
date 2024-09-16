@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentação API - Backend em Node.js</title>
+    <style>
+      body {
+        font-family: "Open Sans", sans-serif;
+        line-height: 1.6;
+        color: #2c3e50;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 20px;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #34495e;
+      }
+      a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .code {
+        background-color: #f3f3f3;
+        border-left: 5px solid #2c3e50;
+
+        border-radius: 4px;
+        padding: 10px;
+        margin: 10px 0;
+        font-family: "Courier New", monospace;
+        overflow-x: auto;
+      }
+      .header-main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .div-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .highlight {
+        background-color: #f3f3f3;
+        padding: 10px;
+        border-left: 5px solid #2c3e50;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+      table th,
+      table td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      .endpoint {
+        background-color: #00953f;
+        padding: 8px;
+        border-radius: 3px;
+        display: inline-block;
+        margin: 5px 0;
+        color: #ffffff;
+        font-weight: bold;
+      }
+      .metodo {
+        padding: 8px;
+        border-radius: 3px;
+        font-weight: bold;
+        margin: 5px 0;
+        color: #ffffff;
+      }
+      .metodo-get {
+        background-color: #00953f;
+      }
+      .metodo-post {
+        background-color: #f0ad4e;
+      }
+      .metodo-put {
+        background-color: #0275d8;
+      }
+      .metodo-delete {
+        background-color: #d9534f;
+      }
+      .btn {
+        background-color: #00953f;
+        outline: none;
+        text-decoration: none;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header-main">
+      <h1>Documentação da API - Backend em Node.js</h1>
+      <img src="https://i.imgur.com/TrYHbXT.png" />
+    </div>
+    <section>
+      <h2>Seção: Como identificar o ID da pasta pai e do documento filho</h2>
+      <p>
+        Nesta <strong>seção</strong>, vamos explicar como identificar o ID da
+        pasta pai e do documento filho em uma listagem de documentos. Isso é
+        importante para que você saiba como utilizar os
+        <span class="highlight">IDs</span> corretamente ao consultar os
+        endpoints da API.
+      </p>
+
+      <h3>Pasta Pai</h3>
+      <p>
+        Na imagem abaixo, o ícone da pasta indica que é uma pasta pai. O código
+        que aparece na coluna "Código" é o ID da pasta pai. Este ID será usado
+        no endpoint para realizar consultas relacionadas a essa pasta.
+      </p>
+
+      <div class="code img">
+        <img src="https://i.imgur.com/YkcwyWr.png" />
+      </div>
+
+      <div class="div-btn">
+        <a
+          href="https://oceanicaengenharia142872.fluig.cloudtotvs.com.br:1150/portal/p/1/ecmnavigation?app_ecm_navigation_doc=51579"
+          class="btn"
+          target="_blank"
+          >Acessar Pasta</a
+        >
+      </div>
+
+      <h3>Documento Filho</h3>
+      <p>
+        Quando você navega para dentro de uma pasta pai, encontrará os
+        documentos filhos. Eles têm um ícone diferente e um código distinto.
+        Este código será utilizado para acessar dados específicos desse
+        documento.
+      </p>
+
+      <div class="code img">
+        <img src="https://i.imgur.com/Hw1XkwG.png" />
+      </div>
+
+      <h2>Endpoints Disponíveis</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Método</th>
+            <th>Endpoint</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="metodo metodo-get">GET</span></td>
+            <td>
+              <a class="endpoint"
+                >https://gestaoequipes-dxfsate5awera9az.eastus-01.azurewebsites.net/{categoria}/{id_pasta_pai}/cards</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td><span class="metodo metodo-post">POST</span></td>
+            <td>
+              <a class="endpoint"
+                >https://gestaoequipes-dxfsate5awera9az.eastus-01.azurewebsites.net/{categoria}/{id_pasta_pai}/cards</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td><span class="metodo metodo-put">PUT</span></td>
+            <td>
+              <a class="endpoint"
+                >https://gestaoequipes-dxfsate5awera9az.eastus-01.azurewebsites.net/{categoria}/{id_pasta_pai}/cards/{id_doc_filho}</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td><span class="metodo metodo-delete">DELETE</span></td>
+            <td>
+              <a class="endpoint"
+                >https://gestaoequipes-dxfsate5awera9az.eastus-01.azurewebsites.net/{categoria}/{id_pasta_pai}/cards/{id_doc_filho}</a
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Body</h3>
+      <div class="code">
+        {<br />
+        &nbsp;&nbsp;"values": [<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;{ "fieldId": "", "value": "" }<br />
+        &nbsp;&nbsp;]<br />
+        }
+      </div>
+      <p>
+        <strong>fieldId</strong> será o ID do input do <em>Fluig</em>, e
+        <strong>value</strong> é o valor a ser inserido.
+      </p>
+    </section>
+  </body>
+</html>
